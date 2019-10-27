@@ -16,3 +16,34 @@
   text-shadow: -10px 5px 5px rgb(218, 113, 113);
 }
 
+.About {
+  width: 80;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10%;
+  margin-left: 2%;
+  margin-right: 2%;
+  padding: 2%;
+ 
+}
+
+.Teddy {
+  width: 80%;
+  height: 350px;
+  border-radius: 10%;
+  -ms-transform: rotate(7deg); 
+  -webkit-transform: rotate(7deg); 
+  transform: rotate(7deg);
+  margin: 5%;
+}
+
+.Abouteddy {
+  width: 95%;
+  margin: 5%;
+  background: rgb(7, 7, 56);
+  box-shadow: 10px 10px 5px #aaaaaa;
+  border-radius: 10%;
+  transform: rotate(-7deg);
+  padding: 2%;
+}
+
