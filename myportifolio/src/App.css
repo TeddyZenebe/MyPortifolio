@@ -85,7 +85,7 @@ html, body {
  
 }
 
-.Teddy {
+.Teddy-Image {
   width: 80%;
   height: 350px;
   border-radius: 10%;
@@ -95,12 +95,12 @@ html, body {
   margin: 5%;
 }
 
-.Abouteddy {
+.Abou-teddy {
   width: 95%;
   margin: 5%;
   background: rgb(7, 7, 56);
   box-shadow: 10px 10px 5px #aaaaaa;
-  border-radius: 10%;
+  border-radius: 50px;
   transform: rotate(-7deg);
   padding: 2%;
 }
