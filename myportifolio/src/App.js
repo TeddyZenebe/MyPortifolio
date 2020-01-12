@@ -1,6 +1,7 @@
 import React from 'react';
 import {NavLink, Route} from 'react-router-dom'
 import './App.css'
+import Particles from 'react-particles-js';
 import Home from './components/home.js'
 import About from './components/about.js'
 import projects from './components/projects.js'
@@ -9,18 +10,34 @@ import contact from './components/contact.js'
 function App() {
   return (
     <div className="App">
-      <div className="Nav">
-        <NavLink to='/'>HOME</NavLink>
-        <NavLink to='/about'>ABOUT</NavLink>
-        <NavLink to='/project'>PROJECT</NavLink>
-        <NavLink to='/contact'>CONTACT</NavLink>
+       <div className="Nav">
+        <NavLink className='Nav-menu' to='/'>HOME</NavLink>
+        <NavLink className='Nav-menu' to='/about'>ABOUT</NavLink>
+        <NavLink className='Nav-menu' to='/project'>PROJECT</NavLink>
+        <NavLink className='Nav-menu' to='/contact'>CONTACT</NavLink>
       </div>
-      
-
-     <Route exact path="/" component={Home} />
-     <Route exact path="/about" component={About} />
-     <Route exact path="/project" component={projects} />
-     <Route exact path="/contact" component={contact} />
+      <Particles className='Particles' params={{
+	    "particles": {
+	        "number": {
+	            "value": 800
+	        },
+	        "size": {
+	            "value": 5
+	        }
+	    },
+	    "interactivity": {
+	        "events": {
+	            "onhover": {
+	                "enable": true,
+	                "mode": "repulse"
+	            }
+	        }
+	    }
+	}}  />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/about" component={About} />
+     {/*<Route exact path="/project" component={projects} />
+     <Route exact path="/contact" component={contact} /> */}
     </div>
   );
 }
