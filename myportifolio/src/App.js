@@ -9,7 +9,7 @@ import contact from './components/contact.js'
 function App() {
   return (
     <div className="App">
-       <div className="Nav">
+      <div className="Nav">
         <NavLink className='Nav-menu' to='/'>HOME</NavLink>
         <NavLink className='Nav-menu' to='/about'>ABOUT</NavLink>
         <NavLink className='Nav-menu' to='/project'>PROJECT</NavLink>
@@ -17,8 +17,8 @@ function App() {
       </div>
       <Route exact path="/" component={Home} />
       <Route exact path="/about" component={About} />
-     {/*<Route exact path="/project" component={projects} />
-     <Route exact path="/contact" component={contact} /> */}
+      <Route exact path="/project" component={projects} />
+      <Route exact path="/contact" component={contact} />
     </div>
   );
 }

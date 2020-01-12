@@ -19,11 +19,12 @@ html, body {
 }
 
 .Nav {
-  width: 50%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  margin-top: 0.5%;
-  margin-left: 25%;
+  justify-content:space-around;
+  padding-left: 12%;
+  padding-right: 12%;
+  background-color:  #004d4d;
 }
 
 .Nav-menu {
@@ -52,13 +53,12 @@ html, body {
 
 .Home {
   width: 100%;
-  
+  height: 95%;
   background-color: #737373;
-  border: 1.2px solid red;
 }
 
 .Particles {
-  height: '95vh';
+  height: '94vh';
   width: 100%;
 } 
 
@@ -77,36 +77,29 @@ html, body {
 }
 
 .About {
-  width: 80;
+  width: 100%;
+  height: '94vh';
   display: flex;
   font-size: 2.2rem;
+  margin: 0;
+  padding: 0;
   justify-content: space-between;
-  margin-top: 10%;
-  margin-left: 2%;
-  margin-right: 2%;
-  padding: 2%;
-  z-index: 1032;
-  position: absolute;
- 
+  background-color: #e6ffff;
 }
 
-.Teddy {
+.Abou-teddy {
+  width: 70%;
+  text-align: left;
+  height: 100%;
+  padding: 2%;
+  margin: 0;
+  color: #003d99;
+}
+
+.Teddy-Img {
   width: 80%;
-  height: 350px;
-  border-radius: 10%;
-  -ms-transform: rotate(7deg); 
-  -webkit-transform: rotate(7deg); 
-  transform: rotate(7deg);
-  margin: 5%;
+  height: 782px;
+  right: 0;
 }
 
-.Abouteddy {
-  width: 95%;
-  margin: 5%;
-  background: rgb(7, 7, 56);
-  box-shadow: 10px 10px 5px #aaaaaa;
-  border-radius: 10%;
-  transform: rotate(-7deg);
-  padding: 2%;
-}
 
