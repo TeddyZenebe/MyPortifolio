@@ -1,7 +1,6 @@
 import React from 'react';
 import {NavLink, Route} from 'react-router-dom'
 import './App.css'
-import Particles from 'react-particles-js';
 import Home from './components/home.js'
 import About from './components/about.js'
 import projects from './components/projects.js'
@@ -16,24 +15,6 @@ function App() {
         <NavLink className='Nav-menu' to='/project'>PROJECT</NavLink>
         <NavLink className='Nav-menu' to='/contact'>CONTACT</NavLink>
       </div>
-      <Particles className='Particles' params={{
-	    "particles": {
-	        "number": {
-	            "value": 800
-	        },
-	        "size": {
-	            "value": 5
-	        }
-	    },
-	    "interactivity": {
-	        "events": {
-	            "onhover": {
-	                "enable": true,
-	                "mode": "repulse"
-	            }
-	        }
-	    }
-	}}  />
       <Route exact path="/" component={Home} />
       <Route exact path="/about" component={About} />
      {/*<Route exact path="/project" component={projects} />

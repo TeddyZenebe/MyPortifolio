@@ -6,8 +6,8 @@ html, body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #004d00;
 }
+
 .App {
   width: 100%;
   height: 100%;
@@ -18,18 +18,8 @@ html, body {
   overflow:hidden;
 }
 
-.Particles {
-  height: 95%;
-  width: 100%;
-  background: #737373;
-  overflow:hidden;
-  z-index: 1;
-  position: absolute;
-} 
-
 .Nav {
   width: 50%;
-  height: 100px;
   display: flex;
   justify-content: space-between;
   margin-top: 0.5%;
@@ -37,19 +27,20 @@ html, body {
 }
 
 .Nav-menu {
-  width: 12%;
+  width: 120px;
+  height: 45px;
   color:#ffffff;
+  font-size: 2rem;
   cursor: pointer;
   background-color: #595959;
   text-decoration: none;
   border-radius: 10px;
   border: 2px solid #0d0d0d;
-  transition: 0.5s;
+  transition: 1s;
   text-align: center;
   vertical-align: middle;
-  font-size: 5.4rem;
-  padding: 1.5rem;
-  padding-bottom: 4rem;
+  padding: .5rem;
+  margin: 0.5rem;
 }
 
 .Nav-menu:hover, .Nav-menu:focus {
@@ -59,22 +50,36 @@ html, body {
   box-shadow: inset 0 -6rem 0 #03A6
 }
 
+.Home {
+  width: 100%;
+  
+  background-color: #737373;
+  border: 1.2px solid red;
+}
+
+.Particles {
+  height: '95vh';
+  width: 100%;
+} 
+
 .Intro {
+  width: 60%;
   display: flex;
+  color: #003d99;
   text-align: center;
   font-family: 'Fugaz One', cursive;
-  font-size: 10.8rem;
-  margin-top: 15%;
-  margin-left: 25%;
-  text-shadow: -10px 5px 5px rgb(218, 113, 113);
-  z-index: 1032;
+  font-size: 4rem;
+  text-shadow: -10px 5px 5px #ffffff;
+  margin-top: 20%;
+  margin-left: 20%;
   position: absolute;
+  z-index: 1;
 }
 
 .About {
   width: 80;
   display: flex;
-  font-size: 4.2rem;
+  font-size: 2.2rem;
   justify-content: space-between;
   margin-top: 10%;
   margin-left: 2%;
