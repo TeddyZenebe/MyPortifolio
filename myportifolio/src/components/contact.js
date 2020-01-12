@@ -65,7 +65,7 @@ export default function ContactForm() {
    <div className="contact-page">
     <Container>
     <div className="contact-form-card">
-      <h2>Contact Us</h2>
+      <h2>Contact Me</h2>
       <Formik
         validationSchema={validationSchema}
         initialValues={{
@@ -168,16 +168,15 @@ export default function ContactForm() {
       </Dialog>
     </div>
     <div className="contactInfo">
-            <h2>PropMan</h2>
             <div className="contactType">
               <MdEmail className="icon" />
-              <p>acme.info@2mail.com</p>
+              <p>tzenebe3@gmail.com</p>
             </div>
             <div className="contactType">
               <MdPhone className="icon" />
               <p>+0 000-000-0000</p>
             </div>
-            <h3>Follow Us</h3>
+            <h3>Follow Me</h3>
             <div className="contactIcons">
               <FaFacebook className="icon" />
               <FaTwitter className="icon" />
