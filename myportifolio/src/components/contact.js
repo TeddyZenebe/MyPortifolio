@@ -157,7 +157,7 @@ export default function ContactForm() {
           </DialogTitle>
           <ThankYou viewBox="0 0 1035 627" width={500} />
           <DialogContent>
-            <Typography align="center">Thank you for your feedback!</Typography>
+            <Typography align="center">Thank you for contacting me!</Typography>
           </DialogContent>
           <DialogActions>
             <Button autoFocus onClick={handleClose} color="primary">

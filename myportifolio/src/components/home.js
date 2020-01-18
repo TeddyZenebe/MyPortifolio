@@ -2,7 +2,7 @@ import React from 'react'
 import Particles from 'react-particles-js';
 import {Link} from 'react-router-dom'
 
-function About() {
+function Home() {
     return (
       <div className='Home'>
         <h1 className="Intro">
@@ -32,4 +32,4 @@ function About() {
     )
 }
 
-export default About;
+export default Home;
