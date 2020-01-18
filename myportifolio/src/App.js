@@ -42,14 +42,20 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - 200px)`,
       marginLeft: 200,
-      background: 'red'
+      background: 'red',
+      textAlign: 'center'
     },
   },
   appBarWord : {
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: 100,
-      fontFamily: 'Allerta Stencil'
-    },
+      display: 'flex',
+      fontFamily: 'Allerta Stencil',
+      marginLeft: '25%',
+      color: '#c0eb34',
+  },
+  navTap : {
+      fontFamily: 'Allerta Stencil',
+      fontSize: '1.4rem',
+      color: '#c0eb34',
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -91,30 +97,30 @@ function App(props) {
       <List>
           <ListItem button >
             <ListItemIcon> <HomeWorkIcon/> </ListItemIcon>
-            <ListItemText> <Link to='/'>HOME</Link> </ListItemText>
+            <ListItemText> <Link to='/' className={classes.navTap}>HOME</Link> </ListItemText>
           </ListItem>
           <ListItem button >
             <ListItemIcon> <InfoIcon /> </ListItemIcon>
-            <ListItemText> <Link to='/about'>ABOUT</Link> </ListItemText>
+            <ListItemText> <Link to='/about' className={classes.navTap}>ABOUT</Link> </ListItemText>
           </ListItem>
           <ListItem button >
             <ListItemIcon> <WorkIcon /> </ListItemIcon>
-            <ListItemText> <Link to ='/projects'>PROJECTS</Link> </ListItemText>
+            <ListItemText> <Link to ='/projects' className={classes.navTap}>PROJECTS</Link> </ListItemText>
           </ListItem> 
       </List>
       <Divider />
       <List>
           <ListItem button> 
             <ListItemIcon> <ContactMailIcon/> </ListItemIcon>
-            <ListItemText> <Link to='contact'>CONTACT</Link> </ListItemText>
+            <ListItemText> <Link to='contact' className={classes.navTap}>CONTACT</Link> </ListItemText>
           </ListItem>
           <ListItem button> 
             <ListItemIcon> <PictureAsPdfIcon/> </ListItemIcon>
-            <ListItemText> <Link to='/resume'>RESUME</Link> </ListItemText>
+            <ListItemText> <Link to='/resume' className={classes.navTap}>RESUME</Link> </ListItemText>
           </ListItem>
           <ListItem button> 
             <ListItemIcon> <SportsSoccerIcon/> </ListItemIcon>
-            <ListItemText> <Link to='/hobby'>HOBYY</Link> </ListItemText>
+            <ListItemText> <Link to='/hobby' className={classes.navTap}>HOBYY</Link> </ListItemText>
           </ListItem>
       </List>
     </div>
@@ -151,7 +157,7 @@ function App(props) {
               paper: classes.drawerPaper,
             }}
             ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
+              keepMounted: true, 
             }}
           >
             {drawer}
@@ -170,7 +176,7 @@ function App(props) {
         </Hidden>
       </nav>
       <main className={classes.content}>
-        <div className={classes.toolbar} />
+      <div className={classes.toolbar} />
 
       <Route exact path="/" component={Home} />
       <Route exact path="/about" component={About} />

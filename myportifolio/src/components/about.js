@@ -1,12 +1,36 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
 import teddyImg from '../img/teddy2.jpg'
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { Hidden } from '@material-ui/core';
+
+const useStyles = makeStyles(theme => ({
+  
+    about : {
+        width: '50%',
+        display: 'flex',
+        fontSize: '1.2rem',
+        border: '1.2px solid red'
+      },
+    abouTeddy : {
+        width: '20%',
+        textAlign: 'left',
+        color: '#003d99',
+        border: '2px solid green'
+      },
+    teddyImag : {
+        width: '80%',
+        overflow: 'hidden',
+        border: '2px solid green'
+    }
+}));
 
 function About() {
+    const classes = useStyles();
     return (
-        <div className='About'>
+        <div className='About' className={classes.about}>
           
-          <div className='Abou-teddy' > 
+          <div className='Abou-teddy' className={classes.aboutTeddy} > 
             <h1>It is my Pleasure to see you here!</h1>
             <h1> My Name is Tewodros Zenebe </h1>
             <p>
@@ -20,7 +44,7 @@ function About() {
             </p>
             <p>Resently I participated in the project that built using .Net(core) and Angular.js. I also have exposure using Pyton programing langudge</p>
             <p>
-                To checkout some of my projects <NavLink to='/project'>Click Here</NavLink>
+                To checkout some of my projects <NavLink to='/projects'>Click Here</NavLink>
             </p>
             <p>
                 I am driven by my passion for coding, web development, RESTfull API building and Database Adminstration.
@@ -28,7 +52,7 @@ function About() {
                 that facilitate better development. And that passion has driven me to do small projects in my free time.
             </p>
           </div>
-          <div>
+          <div className={classes.teddyImag}>
               <img src= {teddyImg} alt='my look' className='Teddy-Img' />
           </div>
 
