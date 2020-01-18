@@ -141,7 +141,7 @@ function App(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h4" Wrap className={classes.appBarWord}>
-            Oportunity did not Knock Untill I Built a Door!
+            Oportunity did not Knock Untill You Built a Door!
           </Typography>
         </Toolbar>
       </AppBar>
