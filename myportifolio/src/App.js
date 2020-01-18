@@ -169,10 +169,8 @@ function App(props) {
           </Drawer>
         </Hidden>
       </nav>
-      {/* <main className={classes.content}>
+      <main className={classes.content}>
         <div className={classes.toolbar} />
-        <Home />
-      </main> */}
 
       <Route exact path="/" component={Home} />
       <Route exact path="/about" component={About} />
@@ -180,7 +178,7 @@ function App(props) {
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/resume" component={Resume} />
       <Route exact path="/hobby" component={Hobby} />
-
+      </main>
     </div>
   );
 }
