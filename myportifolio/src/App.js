@@ -20,7 +20,13 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import Home from './components/home'
+import Home from './components/home';
+import About from './components/about';
+import Contact from './components/contact';
+import Projects from './components/projects';
+import Resume from './components/Resume';
+import Hobby from './components/hobby'
+import { Route, Link} from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -83,35 +89,32 @@ function App(props) {
       <div className={classes.toolbar} >Hello</div>
       <Divider />
       <List>
-          <ListItem button onClick={() => {
-            navigate(action.path);
-            handleClose();
-          }}>
+          <ListItem button >
             <ListItemIcon> <HomeWorkIcon/> </ListItemIcon>
-            <ListItemText> HOME </ListItemText>
+            <ListItemText> <Link to='/'>HOME</Link> </ListItemText>
           </ListItem>
           <ListItem button >
             <ListItemIcon> <InfoIcon /> </ListItemIcon>
-            <ListItemText> ABOUT </ListItemText>
+            <ListItemText> <Link to='/about'>ABOUT</Link> </ListItemText>
           </ListItem>
           <ListItem button >
             <ListItemIcon> <WorkIcon /> </ListItemIcon>
-            <ListItemText> PROJECT </ListItemText>
+            <ListItemText> <Link to ='/projects'>PROJECTS</Link> </ListItemText>
           </ListItem> 
       </List>
       <Divider />
       <List>
           <ListItem button> 
             <ListItemIcon> <ContactMailIcon/> </ListItemIcon>
-            <ListItemText> CONTACT </ListItemText>
+            <ListItemText> <Link to='contact'>CONTACT</Link> </ListItemText>
           </ListItem>
           <ListItem button> 
             <ListItemIcon> <PictureAsPdfIcon/> </ListItemIcon>
-            <ListItemText> RESUME </ListItemText>
+            <ListItemText> <Link to='/resume'>RESUME</Link> </ListItemText>
           </ListItem>
           <ListItem button> 
             <ListItemIcon> <SportsSoccerIcon/> </ListItemIcon>
-            <ListItemText> HOBYY </ListItemText>
+            <ListItemText> <Link to='/hobby'>HOBYY</Link> </ListItemText>
           </ListItem>
       </List>
     </div>
@@ -166,10 +169,18 @@ function App(props) {
           </Drawer>
         </Hidden>
       </nav>
-      <main className={classes.content}>
+      {/* <main className={classes.content}>
         <div className={classes.toolbar} />
         <Home />
-      </main>
+      </main> */}
+
+      <Route exact path="/" component={Home} />
+      <Route exact path="/about" component={About} />
+      <Route exact path="/projects" component={Projects} />
+      <Route exact path="/contact" component={Contact} />
+      <Route exact path="/resume" component={Resume} />
+      <Route exact path="/hobby" component={Hobby} />
+
     </div>
   );
 }
