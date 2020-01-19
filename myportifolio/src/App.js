@@ -42,7 +42,8 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - 200px)`,
       marginLeft: 200,
-      background: 'red',
+      background: '#ff7f50',
+      opacity: 0.8,
       textAlign: 'center'
     },
   },
@@ -50,7 +51,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     fontFamily: 'Allerta Stencil',
     marginLeft: '25%',
-    color: '#c0eb34',
+    color: '#fffff',
   },
   navTap: {
     fontFamily: 'Allerta Stencil',
@@ -67,7 +68,7 @@ const useStyles = makeStyles(theme => ({
   drawerPaper: {
     width: 200,
     background: '#003300',
-    opacity: 0.5,
+    opacity: 0.6,
     fontSize: '3.5rem',
     fontFamily: 'Allerta Stencil',
     color: '#ffffff'

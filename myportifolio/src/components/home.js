@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
 		color: '#003d99',
 		textAlign: 'center',
 		fontFamily: 'Fugaz One',
-		fontSize: '4rem',
+		fontSize: '3rem',
 		textShadow: '-10px 5px 5px #ffffff',
 		padding: theme.spacing(3),
 		marginTop: '10%',
