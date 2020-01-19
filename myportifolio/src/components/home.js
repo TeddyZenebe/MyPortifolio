@@ -17,6 +17,9 @@ const useStyles = makeStyles(theme => ({
 		marginLeft: '10%',
 		position: 'absolute',
 		zIndex: 1,
+	},
+	particels: {
+		minHeight: '100vh'
 	}
 }));
 
@@ -31,10 +34,10 @@ function Home(props) {
 
 				For More Information Checkout <br />About & Project pages.
         </h1>
-			<Particles className='Particles' params={{
+			<Particles className={classes.particels} params={{
 				"particles": {
 					"number": {
-						"value": 50
+						"value": 80
 					},
 					"size": {
 						"value": 5
