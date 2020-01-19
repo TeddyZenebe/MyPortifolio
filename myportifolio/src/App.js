@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - 200px)`,
       marginLeft: 200,
-      background: '#ff7f50',
+      background: '#66b3ff',
       opacity: 0.8,
       textAlign: 'center'
     },
@@ -67,8 +67,8 @@ const useStyles = makeStyles(theme => ({
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: 200,
-    background: '#003300',
-    opacity: 0.6,
+    background: '#66b3ff',
+    opacity: 1,
     fontSize: '3.5rem',
     fontFamily: 'Allerta Stencil',
     color: '#ffffff'
