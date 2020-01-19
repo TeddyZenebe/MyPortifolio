@@ -26,7 +26,7 @@ import Contact from './components/contact';
 import Projects from './components/projects';
 import Resume from './components/Resume';
 import Hobby from './components/hobby'
-import { Route, Link} from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -46,16 +46,16 @@ const useStyles = makeStyles(theme => ({
       textAlign: 'center'
     },
   },
-  appBarWord : {
-      display: 'flex',
-      fontFamily: 'Allerta Stencil',
-      marginLeft: '25%',
-      color: '#c0eb34',
+  appBarWord: {
+    display: 'flex',
+    fontFamily: 'Allerta Stencil',
+    marginLeft: '25%',
+    color: '#c0eb34',
   },
-  navTap : {
-      fontFamily: 'Allerta Stencil',
-      fontSize: '1.4rem',
-      color: '#c0eb34',
+  navTap: {
+    fontFamily: 'Allerta Stencil',
+    fontSize: '1.4rem',
+    color: '#c0eb34',
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -66,7 +66,7 @@ const useStyles = makeStyles(theme => ({
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: 200,
-    background:'#003300',
+    background: '#003300',
     opacity: 0.5,
     fontSize: '3.5rem',
     fontFamily: 'Allerta Stencil',
@@ -76,7 +76,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     height: 'auto',
     padding: theme.spacing(3),
-    background:'#bfbfbf',
+    background: '#bfbfbf',
   },
 }));
 
@@ -95,33 +95,33 @@ function App(props) {
       <div className={classes.toolbar} >Hello</div>
       <Divider />
       <List>
-          <ListItem button >
-            <ListItemIcon> <HomeWorkIcon/> </ListItemIcon>
-            <ListItemText> <Link to='/' className={classes.navTap}>HOME</Link> </ListItemText>
-          </ListItem>
-          <ListItem button >
-            <ListItemIcon> <InfoIcon /> </ListItemIcon>
-            <ListItemText> <Link to='/about' className={classes.navTap}>ABOUT</Link> </ListItemText>
-          </ListItem>
-          <ListItem button >
-            <ListItemIcon> <WorkIcon /> </ListItemIcon>
-            <ListItemText> <Link to ='/projects' className={classes.navTap}>PROJECTS</Link> </ListItemText>
-          </ListItem> 
+        <ListItem button >
+          <ListItemIcon> <HomeWorkIcon /> </ListItemIcon>
+          <ListItemText> <Link to='/' className={classes.navTap}>HOME</Link> </ListItemText>
+        </ListItem>
+        <ListItem button >
+          <ListItemIcon> <InfoIcon /> </ListItemIcon>
+          <ListItemText> <Link to='/about' className={classes.navTap}>ABOUT</Link> </ListItemText>
+        </ListItem>
+        <ListItem button >
+          <ListItemIcon> <WorkIcon /> </ListItemIcon>
+          <ListItemText> <Link to='/projects' className={classes.navTap}>PROJECTS</Link> </ListItemText>
+        </ListItem>
       </List>
       <Divider />
       <List>
-          <ListItem button> 
-            <ListItemIcon> <ContactMailIcon/> </ListItemIcon>
-            <ListItemText> <Link to='contact' className={classes.navTap}>CONTACT</Link> </ListItemText>
-          </ListItem>
-          <ListItem button> 
-            <ListItemIcon> <PictureAsPdfIcon/> </ListItemIcon>
-            <ListItemText> <Link to='/resume' className={classes.navTap}>RESUME</Link> </ListItemText>
-          </ListItem>
-          <ListItem button> 
-            <ListItemIcon> <SportsSoccerIcon/> </ListItemIcon>
-            <ListItemText> <Link to='/hobby' className={classes.navTap}>HOBYY</Link> </ListItemText>
-          </ListItem>
+        <ListItem button>
+          <ListItemIcon> <ContactMailIcon /> </ListItemIcon>
+          <ListItemText> <Link to='contact' className={classes.navTap}>CONTACT</Link> </ListItemText>
+        </ListItem>
+        <ListItem button>
+          <ListItemIcon> <PictureAsPdfIcon /> </ListItemIcon>
+          <ListItemText> <Link to='/resume' className={classes.navTap}>RESUME</Link> </ListItemText>
+        </ListItem>
+        <ListItem button>
+          <ListItemIcon> <SportsSoccerIcon /> </ListItemIcon>
+          <ListItemText> <Link to='/hobby' className={classes.navTap}>HOBYY</Link> </ListItemText>
+        </ListItem>
       </List>
     </div>
   );
@@ -157,7 +157,7 @@ function App(props) {
               paper: classes.drawerPaper,
             }}
             ModalProps={{
-              keepMounted: true, 
+              keepMounted: true,
             }}
           >
             {drawer}
@@ -176,14 +176,14 @@ function App(props) {
         </Hidden>
       </nav>
       <main className={classes.content}>
-      <div className={classes.toolbar} />
+        <div className={classes.toolbar} />
 
-      <Route exact path="/" component={Home} />
-      <Route exact path="/about" component={About} />
-      <Route exact path="/projects" component={Projects} />
-      <Route exact path="/contact" component={Contact} />
-      <Route exact path="/resume" component={Resume} />
-      <Route exact path="/hobby" component={Hobby} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/projects" component={Projects} />
+        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/resume" component={Resume} />
+        <Route exact path="/hobby" component={Hobby} />
       </main>
     </div>
   );
