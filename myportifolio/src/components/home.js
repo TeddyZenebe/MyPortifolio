@@ -1,6 +1,5 @@
 import React from 'react'
 import Particles from 'react-particles-js';
-import {Link} from 'react-router-dom'
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
@@ -28,8 +27,9 @@ function Home(props) {
     return (
       <div className='Home'>
         <h1 className="Intro" className={classes.intro}>
-           Hello, Welcome to My Portifolio Page. <br />I am Teddy Zenebe, Full Stack Developer<br />
-           For More Information Checkout <br />About & Project page.
+           Hello, Welcome to My Portifolio Page. <br />I am Teddy Zenebe, Full Stack Developer & Certified MSSQL Database Administrator<br />
+		   
+           For More Information Checkout <br />About & Project pages.
         </h1>
         <Particles className='Particles' params={{
 	        "particles": {

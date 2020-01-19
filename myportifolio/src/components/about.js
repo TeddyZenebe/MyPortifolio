@@ -2,60 +2,59 @@ import React from 'react'
 import {NavLink} from 'react-router-dom'
 import teddyImg from '../img/teddy2.jpg'
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Hidden } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   
     about : {
-        width: '50%',
+        width: '100%',
         display: 'flex',
         fontSize: '1.2rem',
-        border: '1.2px solid red'
       },
     abouTeddy : {
-        width: '20%',
+        width: '50%',
         textAlign: 'left',
+        fontFamily: 'Sofia',
+        fontSize:'2rem',
         color: '#003d99',
-        border: '2px solid green'
       },
     teddyImag : {
-        width: '80%',
-        overflow: 'hidden',
-        border: '2px solid green'
+        width: '95%',
+        height: '95%',
+        paddingLeft:'5%'
     }
 }));
 
 function About() {
     const classes = useStyles();
     return (
-        <div className='About' className={classes.about}>
-          
-          <div className='Abou-teddy' className={classes.aboutTeddy} > 
+        <div  className={classes.about}>  
+          <div  className={classes.abouTeddy} > 
             <h1>It is my Pleasure to see you here!</h1>
-            <h1> My Name is Tewodros Zenebe </h1>
+            <h2> My Name is Tewodros Zenebe </h2><br/>
             <p>
-                I am a full-stack web application developer living in Charlotte, NC. I have a total of 6 years of work expriance in differen tech related work.
-                out of 6 years of work expriance 3 of them were in building user friendely responsive web application using HTML5, CSS3, Javascript, React, Bootstrap, JQurey ... &#xe234;
-            </p>
+                I am a full-stack web application developer living in Charlotte, NC. I have more than 6 years of work expriance in differen tech related work.
+                out of 6 years  3 of them were in building user friendely responsive web application using HTML5, CSS3, Javascript, React, Bootstrap, JQurey and other light weight JavaScript and CSS libraries;
+            </p><br/>
             <p>
                 I have more than 2 years expriance in creating RESTful API using Node.js (express). I have morthan 3 years expriance developing and manageing 
                 MSSQL Server database. I certified from Microsoft in MSSQL Server database adminstration and
                 developmant.
-            </p>
-            <p>Resently I participated in the project that built using .Net(core) and Angular.js. I also have exposure using Pyton programing langudge</p>
+            </p><br/>
             <p>
-                To checkout some of my projects <NavLink to='/projects'>Click Here</NavLink>
-            </p>
+                Resently I am participating in the project that built using .Net(core) and React.js. 
+                I also have exposure using Pyton programing langudge</p><br/>
             <p>
                 I am driven by my passion for coding, web development, RESTfull API building and Database Adminstration.
                 And this never restricts me to a single language or tool. I am always trying out/learning new languages and tools 
-                that facilitate better development. And that passion has driven me to do small projects in my free time.
+                that facilitate better development. 
+            </p><br/>
+            <p>
+                To checkout some of my projects <NavLink to='/projects'>Click Here</NavLink>
             </p>
           </div>
-          <div className={classes.teddyImag}>
-              <img src= {teddyImg} alt='my look' className='Teddy-Img' />
+          <div className={classes.abouTeddy}>
+              <img src= {teddyImg} alt='my look'  className={classes.teddyImag} />
           </div>
-
         </div>
     )
 }

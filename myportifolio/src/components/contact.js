@@ -12,12 +12,30 @@ import {
   DialogActions,
   Container
 } from '@material-ui/core';
-
 import { FaFacebook, FaTwitter } from 'react-icons/fa';
-
-//import FormErrors from 
-
 import ThankYou from './thankYou';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+
+const useStyles = makeStyles(theme => ({
+  
+  intro : {
+	width: '60%',
+	display: 'flex',
+	color: '#003d99',
+	textAlign: 'center',
+	fontFamily: 'Fugaz One', 
+	fontSize: '4rem',
+	textShadow: '-10px 5px 5px #ffffff',
+	padding: theme.spacing(3),
+	marginTop: '10%',
+	marginLeft: '10%',
+	position: 'absolute',
+	zIndex: 1,
+  }
+}));
+
+
+  
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -39,8 +57,9 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function ContactForm() {
-  // modal logic
+export default function ContactForm() {  
+  const classes = useStyles();
+  const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => {
