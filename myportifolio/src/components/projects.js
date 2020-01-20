@@ -20,7 +20,10 @@ import html from '../img/html.PNG';
 import node from '../img/node.PNG';
 import pyton from '../img/pyton.PNG';
 import react from '../img/react.PNG';
-import sql from '../img/sql.PNG'
+import sql from '../img/sql.PNG';
+import postgreSQL from '../img/postgres.png';
+import git from '../img/git.png';
+import bootstrap from '../img/Bootstrap.png';
 
 const useStyles = makeStyles(theme => ({
     container: {
@@ -51,7 +54,7 @@ const useStyles = makeStyles(theme => ({
        marginTop:'6%'
     },
     particels: {
-        minHeight: '200vh'
+        minHeight: '210vh'
     }
 }));
 const Projects = (props)=> {
@@ -63,6 +66,9 @@ const Projects = (props)=> {
     <div>
     <div className={classes.container}>
         <div className={classes.projects}>
+            <h2>See below some of the projects I worked on </h2>
+            <h4>for more products visit my github page <a href="https://github.com/TeddyZenebe" target="_blank" >
+                here</a></h4>
         <Card className={classes.project}>
           <CardActionArea>
             <CardContent>
@@ -70,7 +76,7 @@ const Projects = (props)=> {
                 Flood Inundation Warning App
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-              This app built using React and different light weight libraries at the Front-End and .Net (Core) and 
+              This app built using React, different light weight libraries and ArcGIS API at the Front-End and .Net (Core) and 
               MSSQL database at the Back-End. It used to support the Roanoke City storm water administration to make 
               decisions based on the real-time flow data and associated scenarios. 
               <a href="http://espgis.com/roanokefloodapp/#/" target="iframe_a"> Click here to explore the App!</a>
@@ -126,9 +132,10 @@ const Projects = (props)=> {
                 Risk Analysis/ Risk Reddaction
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-                The tenant portal provides you available rooms and its monthly
-                rent price. As a tenant you have a privilege to be served for
-                any available rooms you are interested before any applicants.
+                This app built using JavaScript and ArcGIS API and it is a component of the main RARR website which is not 
+                yet officially started to build. This app will assist defining the risk of flood on the properties and 
+                community within the flood prone area.  And analyze the best mitigation measures to take place
+                <a href="https://teddyzenebe.github.io/RARR/RARR1" target="iframe_a"> Click here to explore the App! </a>
               </Typography>
             </CardContent>
             <CardMedia image={rarr} title="Risk Analysis&Reduction" className={classes.projectImg} />
@@ -207,7 +214,22 @@ const Projects = (props)=> {
 	                    "src":sql,
 	                    "height": 20,
 	                    "width": 20
-	                }
+                    },
+                    {
+                        "src":postgreSQL,
+                        "height": 20,
+	                    "width": 20
+                    },
+                    {
+                        "src": git,
+                        "height": 20,
+	                    "width": 20
+                    },
+                    {
+                        "src":bootstrap,
+                        "height": 20,
+	                    "width": 20
+                    }
 	            ]
 	        },
 	        "color": {

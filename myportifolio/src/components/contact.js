@@ -12,7 +12,7 @@ import {
   DialogActions,
   Container
 } from '@material-ui/core';
-import { FaFacebook, FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaGithub,FaLinkedin } from 'react-icons/fa';
 import ThankYou from './thankYou';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
@@ -214,18 +214,20 @@ export default function ContactForm() {
           </Dialog>
         </div>
         <div className={classes.contactInfo}>
-          <div className="contactType">
+          <div >
             <MdEmail className="icon" />
             <p>tzenebe3@gmail.com</p>
           </div>
-          <div className="contactType">
+          <div >
             <MdPhone className="icon" />
             <p>+1 202-569-4706</p>
           </div>
           <h3>Follow Me</h3>
           <div className="contactIcons">
-            <FaFacebook className="icon" />
-            <FaTwitter className="icon" />
+            <FaFacebook />
+            <FaTwitter  />
+            <FaGithub   />
+            <FaLinkedin />
           </div>
         </div>
     </div>
