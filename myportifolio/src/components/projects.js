@@ -69,9 +69,9 @@ const Projects = (props)=> {
     <div>
     <div className={classes.container}>
         <div className={classes.projects}>
-            <h2>See below some of the projects I worked on </h2>
-            <h4>for more products visit my github page <a href="https://github.com/TeddyZenebe" target="_blank" >
-                here</a></h4>
+            <h1>See below some of the projects I worked on </h1>
+            <h2>for more products visit my github page <a href="https://github.com/TeddyZenebe" target="_blank" >
+                here</a></h2>
         <Card className={classes.project}>
           <CardActionArea>
             <CardContent>
