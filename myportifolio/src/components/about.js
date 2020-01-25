@@ -1,7 +1,8 @@
 import React from 'react'
+import '../App.css'
 import {NavLink} from 'react-router-dom'
 import teddyImg from '../img/teddy2.jpg'
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles} from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
   
@@ -9,6 +10,13 @@ const useStyles = makeStyles(theme => ({
         width: '100%',
         display: 'flex',
         fontSize: '1.2rem',
+      },
+    abouTeddyInt : {
+        width: '50%',
+        textAlign: 'left',
+        fontFamily: 'Sofia',
+        fontSize:'2rem',
+        color: '#003d99',
       },
     abouTeddy : {
         width: '50%',
@@ -18,8 +26,8 @@ const useStyles = makeStyles(theme => ({
         color: '#003d99',
       },
     teddyImag : {
-        width: '95%',
-        height: '95%',
+        width: '85%',
+        height: '85%',
         paddingLeft:'5%'
     }
 }));
@@ -28,7 +36,7 @@ function About() {
     const classes = useStyles();
     return (
         <div  className={classes.about}>  
-          <div  className={classes.abouTeddy} > 
+          <div  className={classes.abouTeddyInt} className='abouTeddyInt'> 
             <h1>It is my Pleasure to see you here!</h1>
             <h2> My Name is Tewodros Zenebe </h2><br/>
             <p>
@@ -52,7 +60,7 @@ function About() {
                 To checkout some of my projects <NavLink to='/projects'>Click Here</NavLink>
             </p>
           </div>
-          <div className={classes.abouTeddy}>
+          <div className={classes.abouTeddy} className='abouTeddy'>
               <img src= {teddyImg} alt='my look'  className={classes.teddyImag} />
           </div>
         </div>
