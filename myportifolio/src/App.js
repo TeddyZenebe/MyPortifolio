@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import './App.css';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
@@ -46,12 +46,6 @@ const useStyles = makeStyles(theme => ({
       opacity: 0.8,
       textAlign: 'center'
     },
-  },
-  appBarWord: {
-    display: 'flex',
-    fontFamily: 'Allerta Stencil',
-    marginLeft: '25%',
-    color: '#fffff',
   },
   navTap: {
     fontFamily: 'Allerta Stencil',
@@ -141,7 +135,7 @@ function App(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h4" Wrap className={classes.appBarWord}>
+          <Typography variant="h4" className='appBarWord'>
             Oportunity did not Knock Untill You Built a Door!
           </Typography>
         </Toolbar>

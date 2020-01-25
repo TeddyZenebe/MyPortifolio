@@ -21,6 +21,18 @@ html, body {
   background:  #737373;
   overflow:hidden;
 }
+.appBarWord {
+  display: inline;
+  font-size: 10rem;
+  color: white;
+  padding-left: 25%;
+}
+@media only screen and (max-width: 768px) {
+  .appBarWord {
+    font-size: 2rem;
+    padding-left: 0%;
+  }
+}
 
 /*----------------------------*/
      /*Nave page*/
@@ -64,17 +76,6 @@ html, body {
      /*Home page*/
 /*----------------------------*/
 
-.Home {
-  width: 100%;
-  height: 95%;
-  background-color: #737373;
-}
-
-.Particles {
-  height: '94vh';
-  width: 100%;
-} 
-
 .Intro {
   width: 60%;
   display: flex;
@@ -83,11 +84,19 @@ html, body {
   font-family: 'Fugaz One', cursive;
   font-size: 4rem;
   text-shadow: -10px 5px 5px #ffffff;
-  margin-top: 20%;
-  margin-left: 20%;
+  margin-top: 10%;
+  margin-left: 12%;
   position: absolute;
   z-index: 1;
 }
+
+  /*mobile size */
+
+  @media only screen and (max-width: 768px) {
+    .Intro {
+      font-size: 2rem;
+    }
+  }
 
 /*----------------------------*/
      /*Resume Page*/
