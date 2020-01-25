@@ -28,7 +28,7 @@ import bootstrap from '../img/Bootstrap.png';
 const useStyles = makeStyles(theme => ({
     container: {
         display:'flex',
-        width: '80%',
+        width: '100%',
         position: 'absolute',
         zIndex: 1,
     },
@@ -42,8 +42,11 @@ const useStyles = makeStyles(theme => ({
         width:'90%',
         margin:'3%',
     },
+    card: {
+      fontSize:'1.2rem'
+    },
     projectImg:{
-        height: 200
+        height: 170
     },
     iframeContainer: {
         width: "50%",
@@ -51,10 +54,10 @@ const useStyles = makeStyles(theme => ({
     iframe: {
        width:'100%',
        height:'100%',
-       marginTop:'6%'
+       marginTop:'14%'
     },
     particels: {
-        minHeight: '210vh'
+        minHeight: '175vh'
     }
 }));
 const Projects = (props)=> {
@@ -75,11 +78,12 @@ const Projects = (props)=> {
               <Typography gutterBottom variant="h5" component="h2">
                 Flood Inundation Warning App
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
+              <Typography variant="body2" color="textSecondary" component="p" className={classes.card}>
               This app built using React, different light weight libraries and ArcGIS API at the Front-End and .Net (Core) and 
               MSSQL database at the Back-End. It used to support the Roanoke City storm water administration to make 
               decisions based on the real-time flow data and associated scenarios. 
               <a href="http://espgis.com/roanokefloodapp/#/" target="iframe_a"> Click here to explore the App!</a>
+              Or copy and past=> http://espgis.com/roanokefloodapp/#/
               </Typography>
             </CardContent>
             <CardMedia image={roanoke} title="Roanoke Flood Inundation warning" className={classes.projectImg} />
@@ -91,10 +95,11 @@ const Projects = (props)=> {
               <Typography gutterBottom variant="h5" component="h2">
                 PropMan
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
+              <Typography variant="body2" color="textSecondary" component="p" className={classes.card}>
               This app built using React and different light weight libraries at the Front-End and Node.JS and PostgreSQL database
               at the Back-End. This app used to help property managers and owners to manage their property and Renters.
               <a href="https://propman.netlify.com/" target="iframe_a"> Click here to explore the App! </a>
+              Or copy and past=> https://propman.netlify.com/
               </Typography>
             </CardContent>
             <CardMedia
@@ -110,12 +115,13 @@ const Projects = (props)=> {
               <Typography gutterBottom variant="h5" component="h2">
                 Intr. Rural School Report
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
+              <Typography variant="body2" color="textSecondary" component="p" className={classes.card}>
               This app built using React and different light weight libraries at the Front-End and Node.JS and 
               PostgreSQL database at the Back-End. This app used to help International Rural School administrators 
               and the board members to communicate and follow up. 
               <a href="https://internationalschoolsocialworks.netlify.com/into" target="iframe_a"> Click here</a> Or
-              <a href="https://internationalschoolsocialreport.netlify.com" target="iframe_a"> here to explore the App!</a>
+              <a href="https://internationalruralschoolreport.netlify.com/login" target="iframe_a"> here to explore the App!</a>
+            Or copy and past=>https://internationalruralschoolreport.netlify.com/login
               </Typography>
             </CardContent>
             <CardMedia
@@ -131,11 +137,12 @@ const Projects = (props)=> {
               <Typography gutterBottom variant="h5" component="h2">
                 Risk Analysis/ Risk Reddaction
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
+              <Typography variant="body2" color="textSecondary" component="p" className={classes.card}>
                 This app built using JavaScript and ArcGIS API and it is a component of the main RARR website which is not 
                 yet officially started to build. This app will assist defining the risk of flood on the properties and 
                 community within the flood prone area.  And analyze the best mitigation measures to take place
                 <a href="https://teddyzenebe.github.io/RARR/RARR1" target="iframe_a"> Click here to explore the App! </a>
+                Or copy and past=> https://teddyzenebe.github.io/RARR/RARR1
               </Typography>
             </CardContent>
             <CardMedia image={rarr} title="Risk Analysis&Reduction" className={classes.projectImg} />
