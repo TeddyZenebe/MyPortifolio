@@ -4,14 +4,15 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
  cv: {
-     width:'100%'
+     width:'100%',
+     color :'#3399ff'
  }
 }));
 
 const Resume = (props)=> {
     const classes = useStyles();
     return (
-        <div>
+        <div className={classes.cv}>
             <h1>Resume updated Nov/2019</h1>
             <img src={CV} alt ='TZ_Resume'className={classes.cv} />
         </div>
