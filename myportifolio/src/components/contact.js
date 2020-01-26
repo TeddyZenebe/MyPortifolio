@@ -224,9 +224,9 @@ export default function ContactForm() {
           </div>
           <h3>Follow Me</h3>
           <div className="contactIcons">
-            <FaFacebook />
-            <FaTwitter  />
-            <FaGithub   />
+            <FaFacebook />{' '}
+            <FaTwitter  />{' '}
+            <a href="https://github.com/TeddyZenebe" target="_blank" ><FaGithub   /></a>{' '}
             <FaLinkedin />
           </div>
         </div>
