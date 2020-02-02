@@ -165,3 +165,70 @@ html, body {
 .cv {
   width: 80%;
 }
+
+/*----------------------------*/
+     /*Contact Page*/
+/*----------------------------*/
+.contactRaper {
+  width: 80%;
+  display: flex;
+  color: #003d99;
+  font-size: 2rem;
+  border-radius: 20px;
+  margin-top: 5%;
+  margin-left: 10%;
+  background: #808080;
+  margin-bottom: 10%;
+  padding: 5%
+}
+.contactMessage {
+  width: 48%;
+}
+.contactInfo {
+  width: 48%;
+  margin-left: 10%
+}
+.input {
+  width: 60%;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  background: #e6e6e6;
+  margin-left: 2%
+}
+.inputMessage {
+  width: 60%;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  background: #e6e6e6;
+  margin-left: 23%;
+}
+
+/*mobile size */
+
+@media only screen and (max-width: 768px) {
+  .contactRaper {
+    display: flex;
+    flex-direction: column;
+  }
+  .contactMessage {
+    width: 90%;
+  }
+  .contactInfo {
+    width: 90%;
+    margin-left: 10%
+  }
+  .input {
+    width: 80%;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    background: #e6e6e6;
+    margin-left: 15%
+  }
+  .inputMessage {
+    font-size: 1.5rem;
+    border-radius: 10px;
+    background: #e6e6e6;
+    margin-left: 15%;
+    width: 80%
+  }
+}
