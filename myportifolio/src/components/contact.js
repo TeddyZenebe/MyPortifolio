@@ -12,9 +12,9 @@ import {
   DialogActions,
   Container
 } from '@material-ui/core';
-import { FaFacebook, FaTwitter, FaGithub,FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaGithub, FaLinkedin, FaExclamation } from 'react-icons/fa';
 import ThankYou from './thankYou';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
 
@@ -66,8 +66,8 @@ const useStyles = makeStyles(theme => ({
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
-    .min(2)
-    .max(100)
+    .min(2, 'Name must be at least 2 characters')
+    .max(100, 'Must be less than 100 characters')
     .required('Must enter a Name'),
   email: Yup.string()
     .email('Must be a valid email address')
@@ -79,14 +79,13 @@ const validationSchema = Yup.object().shape({
     .required('Must enter a Message')
 });
 
-// modal animation
+
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
 export default function ContactForm() {
   const classes = useStyles();
-  const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => {
@@ -97,11 +96,9 @@ export default function ContactForm() {
     setOpen(false);
   };
 
-  // form logic
   const encode = data => {
     return Object.keys(data)
       .map(
-        // eslint-disable-next-line prefer-template
         key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
       )
       .join('&');
@@ -122,20 +119,19 @@ export default function ContactForm() {
               'form-name': 'contact'
             }}
             onSubmit={(values, { resetForm }) => {
-              //   fetch('/', {
-              //     method: 'POST',
-              //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-              //     body: encode({
-              //       'form-name': 'contact',
-              //       ...values
-              //     })
-              //   })
-              // .then(() => {
-              //   resetForm();
-              //   handleOpen();
-              // })
-              // eslint-disable-next-line no-console
-              // .catch(err => console.error(err));
+              fetch('/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: encode({
+                      'form-name': 'contact',
+                      ...values
+                    })
+                  })
+                .then(() => {
+                  resetForm();
+                  handleOpen();
+                })
+                .catch(err => console.error(err));
             }}
           >
             {({ errors, touched, isSubmitting }) => (
@@ -146,7 +142,7 @@ export default function ContactForm() {
                     Name 
                  </label>{' '}
                   <Field placeholder="Enter your name" name="name" type="text" className={classes.input}/>
-                  {/* <FormErrors touched={touched.name} message={errors.name} /> */}
+                  {errors.name && touched.name ? (<div style={{color:'red', marginLeft:'20%', fontSize:'1.5rem'}}><FaExclamation />{errors.name}</div>) : null}
                 </div>
                 <div className={classes.inputWraper}>
                   <label htmlFor="email">
@@ -160,6 +156,7 @@ export default function ContactForm() {
                     type="email"
                     className={classes.input}
                   />
+                  {errors.email && touched.email ? (<div style={{color:'red', marginLeft:'20%', fontSize:'1.5rem'}}><FaExclamation />{errors.email}</div>) : null}
                 </div>
                 <div className={classes.inputWraper}>
                   <label htmlFor="message">
@@ -175,7 +172,7 @@ export default function ContactForm() {
                     type="text"
                     className={classes.inputMessage}
                   />
-                  {/* <FormErrors touched={touched.message} message={errors.message} /> */}
+                  {errors.message && touched.message ? (<div style={{color:'red', marginLeft:'20%', fontSize:'1.5rem'}}><FaExclamation />{errors.message}</div>) : null}
                 </div>
                 <div className={classes.butWrapper}>
                   <button
@@ -224,10 +221,9 @@ export default function ContactForm() {
           </div>
           <h3>Follow Me</h3>
           <div className="contactIcons">
-            <FaFacebook />{' '}
-            <FaTwitter  />{' '}
             <a href="https://github.com/TeddyZenebe" target="_blank" ><FaGithub   /></a>{' '}
-            <FaLinkedin />
+            <FaLinkedin />{' '}
+            <FaFacebook />
           </div>
         </div>
     </div>
