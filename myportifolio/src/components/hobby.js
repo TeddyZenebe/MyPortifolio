@@ -24,7 +24,7 @@ const content = [
         image: `url(${book})`
     },
     {
-        title: 'Swimmingt',
+        title: 'Swimming ',
         description: 'I am not very good in swimming but I love going to pool once a week with my family',
         image: `url(${swimming})`
     }
