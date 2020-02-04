@@ -49,7 +49,7 @@ const Hobby = () => {
                         }}
                     >
                         <div className="inner">
-                            <h3>{item.title}</h3>
+                            <h2>{item.title}</h2>
                             <p>{item.description}</p>
                         </div>
                     </div>
