@@ -14,11 +14,11 @@ function Home(props) {
 	const classes = useStyles();
 	return (
 		<div className='Home'>
-			<h1 className="Intro" >
+			<h2 className="Intro" >
 				Hello, Welcome to My Portifolio Page. <br />I am Teddy Zenebe, Full Stack Developer & Certified MSSQL Database Administrator<br />
 
 				For More Information Checkout <br />About & Project pages.
-            </h1>
+            </h2>
 			<Particles className={classes.particels} params={{
 				"particles": {
 					"number": {

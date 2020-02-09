@@ -13,7 +13,7 @@ const Resume = (props)=> {
     const classes = useStyles();
     return (
         <div className={classes.cv}>
-            <h1>Resume updated Nov/2019</h1>
+            <h5 style={{color: '#003d99'}}>Resume updated Nov/2019</h5>
             <img src={CV} alt ='TZ_Resume'className={classes.cv} />
         </div>
     )

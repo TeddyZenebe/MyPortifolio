@@ -28,9 +28,14 @@ const useStyles = makeStyles(theme => ({
     marginLeft: '35%'
   },
   butSubmit: {
-    background: '#99ff99',
-    marginLeft: '10%'
+    background: '#66b3ff',
+    marginLeft: '10%',
+    '&:hover': {
+      background: '#e6f2ff',
+      marginLeft: '12%',
+    }
   }
+ 
 }));
 
 const validationSchema = Yup.object().shape({
