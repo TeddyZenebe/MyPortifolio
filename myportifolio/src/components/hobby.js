@@ -25,7 +25,7 @@ const content = [
     },
     {
         title: 'Swimming ',
-        description: 'I am not very good in swimming but I love going to pool once a week with my family',
+        description: 'I am not very good in swimming but I love going to pool once a month with my family',
         image: `url(${swimming})`
     }
 ];

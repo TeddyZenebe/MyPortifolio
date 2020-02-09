@@ -197,8 +197,8 @@ export default function ContactForm() {
         <h3>Follow Me</h3>
         <div className="contactIcons">
           <a href="https://github.com/TeddyZenebe" target="_blank" ><FaGithub /></a>{' '}
-          <FaLinkedin />{' '}
-          <FaFacebook />
+          <a href="https://www.linkedin.com/" target ="_blank" ><FaLinkedin /></a>{' '}
+          <a href="https://www.facebook.com/" target ="_blank" ><FaFacebook /></a>
         </div>
       </div>
     </div>
