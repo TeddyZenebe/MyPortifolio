@@ -39,7 +39,7 @@ function About() {
     return (
         <div  className={classes.about}>  
           <div  className={classes.abouTeddyInt} className='abouTeddyInt'> 
-            <h2>It is my Pleasure to see you here!</h2>
+            <h2>It is my Pleasure to see you here!</h2><br />
             <h2> My Name is Tewodros Zenebe </h2>
             <p>
                 I am a full-stack web application developer living in Charlotte, NC. I have more than 6 years of work expriance in differen tech related work.
