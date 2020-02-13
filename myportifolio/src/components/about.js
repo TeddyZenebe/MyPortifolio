@@ -52,7 +52,7 @@ function About() {
             </p>
             <p>
                 Resently I am participating in the project that built using .Net(core) and React.js. 
-                I also have exposure using Pyton programing langudge</p>
+                I also have exposure using Python programing langudge</p>
             <p>
                 I am driven by my passion for coding, web development, RESTfull API building and Database Adminstration.
                 And this never restricts me to a single language or tool. I am always trying out/learning new languages and tools 
