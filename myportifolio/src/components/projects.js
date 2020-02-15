@@ -143,8 +143,8 @@ const Projects = (props) => {
                   This app built using JavaScript and ArcGIS API and it is a component of the main RARR website which is not
                   yet officially started to build. This app will assist defining the risk of flood on the properties and
                   community within the flood prone area.  And analyze the best mitigation measures to take place
-                <a href="https://teddyzenebe.github.io/RARR/RARR1" target="iframe_a" className='projectLink'> Click here to explore the App! </a>
-                  => https://teddyzenebe.github.io/RARR/RARR1
+                <a href="https://rarr.netlify.com/" target="iframe_a" className='projectLink'> Click here to explore the App! </a>
+                  => https://rarr.netlify.com/
               </Typography>
               </CardContent>
               <CardMedia image={rarr} title="Risk Analysis&Reduction" className={classes.projectImg} />
