@@ -11,6 +11,7 @@ import {
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import roanoke from '../img/Roanoke.PNG';
 import propman from '../img/propman.PNG';
+import freehold from '../img/freehold.PNG';
 import irsr from '../img/irsr.PNG';
 import rarr from '../img/rarr.PNG';
 import vs from '../img/VS.PNG';
@@ -102,13 +103,32 @@ const Projects = (props) => {
                   at the Back-End. This app used to help property managers and owners to manage their property and Renters.
               <a href="https://www.freehold.dev/" target="iframe_a" className='projectLink'> Click here to explore the App! </a>
                   => https://www.freehold.dev/
+              <a href="https://pt6-propman.herokuapp.com/" target="iframe_a" className='projectLink'> Click here to explore the back end API! </a>
+                  => https://pt6-propman.herokuapp.com/
               </Typography>
               </CardContent>
               <CardMedia
-                image={propman}
+                image={freehold}
                 title="Freehold Property management"
                 className={classes.projectImg}
               />
+            </CardActionArea>
+          </Card>
+          <Card className={classes.project} className='project'>
+            <CardActionArea>
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Risk Analysis/ Risk Reddaction
+              </Typography>
+                <Typography variant="body2" color="textSecondary" component="p" className={classes.card}>
+                  This app built using JavaScript and ArcGIS API and it is a component of the main RARR website which is not
+                  yet officially started to build. This app will assist defining the risk of flood on the properties and
+                  community within the flood prone area.  And analyze the best mitigation measures to take place
+                <a href="https://espgis.com/RARR_dev/#/" target="iframe_a" className='projectLink'> Click here to explore the App! </a>
+                  => https://espgis.com/RARR_dev/#/
+              </Typography>
+              </CardContent>
+              <CardMedia image={rarr} title="Risk Analysis&Reduction" className={classes.projectImg} />
             </CardActionArea>
           </Card>
           <Card className={classes.project} className='project'>
@@ -131,23 +151,6 @@ const Projects = (props) => {
                 title="International School Rural Repo"
                 className={classes.projectImg}
               />
-            </CardActionArea>
-          </Card>
-          <Card className={classes.project} className='project'>
-            <CardActionArea>
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Risk Analysis/ Risk Reddaction
-              </Typography>
-                <Typography variant="body2" color="textSecondary" component="p" className={classes.card}>
-                  This app built using JavaScript and ArcGIS API and it is a component of the main RARR website which is not
-                  yet officially started to build. This app will assist defining the risk of flood on the properties and
-                  community within the flood prone area.  And analyze the best mitigation measures to take place
-                <a href="https://espgis.com/RARR_dev/#/" target="iframe_a" className='projectLink'> Click here to explore the App! </a>
-                  => https://espgis.com/RARR_dev/#/
-              </Typography>
-              </CardContent>
-              <CardMedia image={rarr} title="Risk Analysis&Reduction" className={classes.projectImg} />
             </CardActionArea>
           </Card>
         </div>
