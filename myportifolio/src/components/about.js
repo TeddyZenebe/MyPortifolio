@@ -10,6 +10,7 @@ const useStyles = makeStyles(theme => ({
         width: '100%',
         display: 'flex',
         fontSize: '1.2rem',
+        height: "hv"
       },
     abouTeddyInt : {
         width: '50%',
