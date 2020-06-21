@@ -8,9 +8,9 @@ import {
   CardContent,
   Typography
 } from '@material-ui/core';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import roanoke from '../img/Roanoke.PNG';
-import propman from '../img/propman.PNG';
+//import propman from '../img/propman.PNG';
 import freehold from '../img/freehold.PNG';
 import irsr from '../img/irsr.PNG';
 import rarr from '../img/rarr.PNG';
@@ -65,7 +65,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 const Projects = (props) => {
-  const { container } = props;
+  //const { container } = props;
   const classes = useStyles();
 
   return (

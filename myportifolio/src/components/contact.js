@@ -16,6 +16,7 @@ import {
 import { FaFacebook, FaGithub, FaLinkedin, FaExclamation } from 'react-icons/fa';
 import ThankYou from './thankYou';
 import { makeStyles } from '@material-ui/core/styles';
+import axios from 'axios'
 
 const useStyles = makeStyles(theme => ({
 
@@ -39,15 +40,15 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const validationSchema = Yup.object().shape({
-  name: Yup.string()
+  FullName: Yup.string()
     .min(2, 'Name must be at least 2 characters')
     .max(100, 'Must be less than 100 characters')
     .required('Must enter a Name'),
-  email: Yup.string()
+  Email: Yup.string()
     .email('Must be a valid email address')
     .max(255, 'Email entered was too long')
     .required('Must enter an Email Address'),
-  message: Yup.string()
+  Message: Yup.string()
     .min(8, 'Message must be at least 8 characters')
     .max(255, 'Message is too long')
     .required('Must enter a Message')
@@ -84,20 +85,12 @@ export default function ContactForm() {
           initialValues={{
             FullName: '',
             Email: '',
-            Message: '',
-            'bot-field': '',
-            'form-name': 'contact'
+            Message: ''
           }}
           onSubmit={(values, { resetForm }) => {
-            fetch('https://teddyzenebeportfoliobe.herokuapp.com/contact', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-              body: encode({
-                'form-name': 'contact',
-                ...values
-              })
-            })
+            axios.post('https://teddyzenebeportfoliobe.herokuapp.com/contact', values)
               .then(() => {
+                console.log(values)
                 resetForm();
                 handleOpen();
               })
@@ -172,10 +165,10 @@ export default function ContactForm() {
           <Container>
             <DialogTitle disableTypography id="alert-dialog-slide-title">
               <h5>Form Submitted!</h5>
-            </DialogTitle>
+            </DialogTitle>            
             <DialogContent>
-              <ThankYou viewBox="0 0 1035 627" width={500} />
               <Typography align="center">Thank you for contacting me!</Typography>
+              <ThankYou viewBox="0 0 1035 627" width={500} />
             </DialogContent>
             <DialogActions>
               <Button autoFocus onClick={handleClose} color="primary">
