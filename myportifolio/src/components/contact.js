@@ -60,16 +60,12 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 export default function ContactForm() {
   const classes = useStyles();
+  // modal logic to show when the submit button clicked
   const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
+  // form logic 
   const encode = data => {
     return Object.keys(data)
       .map(
@@ -79,21 +75,21 @@ export default function ContactForm() {
   };
 
   return (
-    <div className={classes.contactRaper} className='contactRaper'>
+    <div  className='contactRaper'>
 
       <div className='contactMessage'>
         <h2>Contact Me</h2>
         <Formik
           validationSchema={validationSchema}
           initialValues={{
-            name: '',
-            email: '',
-            message: '',
+            FullName: '',
+            Email: '',
+            Message: '',
             'bot-field': '',
             'form-name': 'contact'
           }}
           onSubmit={(values, { resetForm }) => {
-            fetch('/', {
+            fetch('https://teddyzenebeportfoliobe.herokuapp.com/contact', {
               method: 'POST',
               headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
               body: encode({
@@ -111,26 +107,26 @@ export default function ContactForm() {
           {({ errors, touched, isSubmitting }) => (
             <Form>
               <div className={classes.inputWraper}>
-                <label htmlFor="name">
+                <label htmlFor="FullName">
                   <MdPerson /> {' '}
                   Name
                  </label>{' '}
                 <Field placeholder="Enter your name" 
-                       name="name" 
+                       name="FullName" 
                        type="text" 
                        className={classes.input} 
                        className='input'/>
                 {errors.name && touched.name ? (<div style={{ color: 'red', marginLeft: '20%', fontSize: '1.5rem' }}><FaExclamation />{errors.name}</div>) : null}
               </div>
               <div className={classes.inputWraper}>
-                <label htmlFor="email">
+                <label htmlFor="Email">
                   <MdEmail />
                   {' '}
                   Email
               </label> {' '}
                 <Field
                   placeholder="Enter your email address"
-                  name="email"
+                  name="Email"
                   type="email"
                   className={classes.input}
                   className='input'
@@ -138,7 +134,7 @@ export default function ContactForm() {
                 {errors.email && touched.email ? (<div style={{ color: 'red', marginLeft: '20%', fontSize: '1.5rem' }}><FaExclamation />{errors.email}</div>) : null}
               </div>
               <div className={classes.inputWraper}>
-                <label htmlFor="message">
+                <label htmlFor="Message">
                   <MdMessage />
                   {' '}
                   Message
@@ -147,9 +143,8 @@ export default function ContactForm() {
                   as="textarea"
                   rows="4"
                   placeholder="Enter your message"
-                  name="message"
+                  name="Message"
                   type="text"
-                  className={classes.inputMessage}
                   className='inputMessage'
                 />
                 {errors.message && touched.message ? (<div style={{ color: 'red', marginLeft: '20%', fontSize: '1.5rem' }}><FaExclamation />{errors.message}</div>) : null}
@@ -161,7 +156,7 @@ export default function ContactForm() {
                   disabled={isSubmitting}
                 >
                   Submit
-                  </button>
+                </button>
               </div>
             </Form>
           )}
@@ -178,14 +173,14 @@ export default function ContactForm() {
             <DialogTitle disableTypography id="alert-dialog-slide-title">
               <h5>Form Submitted!</h5>
             </DialogTitle>
-            <ThankYou viewBox="0 0 1035 627" width={500} />
             <DialogContent>
+              <ThankYou viewBox="0 0 1035 627" width={500} />
               <Typography align="center">Thank you for contacting me!</Typography>
             </DialogContent>
             <DialogActions>
               <Button autoFocus onClick={handleClose} color="primary">
                 Close
-            </Button>
+              </Button>
             </DialogActions>
           </Container>
         </Dialog>
