@@ -41,7 +41,6 @@ const Hobby = () => {
             >
                 {content.map((item, index) => (
                     <div
-
                         key={index}
                         className="slider-content"
                         style={{

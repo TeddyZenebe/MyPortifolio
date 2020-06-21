@@ -14,6 +14,7 @@ const useStyles = makeStyles(theme => ({
       },
     abouTeddyInt : {
         width: '50%',
+        padding: '2%',
         textAlign: 'left',
         fontFamily: 'Sofia',
         color: '#003d99',
@@ -26,11 +27,11 @@ const useStyles = makeStyles(theme => ({
         fontFamily: 'Sofia',
         fontSize:'2rem',
         color: '#003d99',
+        justifyItems: 'center'
       },
     teddyImag : {
-        width: '85%',
-        height: '85%',
-        paddingLeft:'5%'
+        width: '90%',
+        padding:'5%'
     }
    
 }));
@@ -38,7 +39,7 @@ const useStyles = makeStyles(theme => ({
 function About() {
     const classes = useStyles();
     return (
-        <div  className={classes.about}>  
+        <div  className={classes.about} className="about" >  
           <div  className={classes.abouTeddyInt} className='abouTeddyInt'> 
             <h2>It is my Pleasure to see you here!</h2><br />
             <h2> My Name is Tewodros Zenebe </h2>
@@ -63,7 +64,7 @@ function About() {
                 To checkout some of my projects <NavLink to='/projects'>Click Here</NavLink>
             </p>
           </div>
-          <div className={classes.abouTeddy} className='abouTeddy'>
+          <div className={classes.abouTeddy} >
               <img src= {teddyImg} alt='my look'  className={classes.teddyImag} />
           </div>
         </div>

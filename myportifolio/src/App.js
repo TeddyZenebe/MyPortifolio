@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
   },
   drawer: {
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('lg')]: {
       width: 200,
       flexShrink: 0,
     },
@@ -47,10 +47,14 @@ const useStyles = makeStyles(theme => ({
       textAlign: 'center'
     },
   },
+  navTapWraper: {
+    marginTop: 20,
+  },
   navTap: {
     fontFamily: 'Allerta Stencil',
-    fontSize: '1.4rem',
+    fontSize: '1.5rem',
     color: '#c0eb34',
+    
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -86,34 +90,34 @@ function App(props) {
   };
 
   const drawer = (
-    <div >
+    <div  >
       <div className={classes.toolbar} >Hello</div>
       <Divider />
       <List>
-        <ListItem button >
+        <ListItem button className={classes.navTapWraper}>
           <ListItemIcon> <HomeWorkIcon /> </ListItemIcon>
           <ListItemText> <Link to='/' className={classes.navTap}>HOME</Link> </ListItemText>
         </ListItem>
-        <ListItem button >
+        <ListItem button className={classes.navTapWraper}>
           <ListItemIcon> <InfoIcon /> </ListItemIcon>
           <ListItemText> <Link to='/about' className={classes.navTap}>ABOUT</Link> </ListItemText>
         </ListItem>
-        <ListItem button >
+        <ListItem button className={classes.navTapWraper}>
           <ListItemIcon> <WorkIcon /> </ListItemIcon>
           <ListItemText> <Link to='/projects' className={classes.navTap}>PROJECTS</Link> </ListItemText>
         </ListItem>
       </List>
       <Divider />
       <List>
-        <ListItem button>
+        <ListItem button className={classes.navTapWraper}>
           <ListItemIcon> <ContactMailIcon /> </ListItemIcon>
           <ListItemText> <Link to='contact' className={classes.navTap}>CONTACT</Link> </ListItemText>
         </ListItem>
-        <ListItem button>
+        <ListItem button className={classes.navTapWraper}>
           <ListItemIcon> <PictureAsPdfIcon /> </ListItemIcon>
           <ListItemText> <Link to='/resume' className={classes.navTap}>RESUME</Link> </ListItemText>
         </ListItem>
-        <ListItem button>
+        <ListItem button className={classes.navTapWraper}>
           <ListItemIcon> <SportsSoccerIcon /> </ListItemIcon>
           <ListItemText> <Link to='/hobby' className={classes.navTap}>HOBYY</Link> </ListItemText>
         </ListItem>
