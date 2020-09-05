@@ -49,7 +49,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: '1.2rem'
   },
   projectImg: {
-    height: 170
+    height: 250
   },
   iframeContainer: {
     width: "50%",
@@ -121,9 +121,9 @@ const Projects = (props) => {
                   Risk Analysis/ Risk Reddaction
               </Typography>
                 <Typography variant="body2" color="textSecondary" component="p" className={classes.card}>
-                  This app built using JavaScript and ArcGIS API and it is a component of the main RARR website which is not
-                  yet officially started to build. This app will assist defining the risk of flood on the properties and
-                  community within the flood prone area.  And analyze the best mitigation measures to take place
+                  This app built using JavaScript(React) and ArcGIS API at the Front-End and .Net (Core) and
+                  MSSQL database at the Back-End. This app will assist defining the risk of flood at the properties and
+                  community within the flood prone area.  And analyze the best mitigation techniques based on cost and benefit.
                 <a href="https://espgis.com/RARR_dev/#/" target="iframe_a" className='projectLink'> Click here to explore the App! </a>
                   => https://espgis.com/RARR_dev/#/
               </Typography>
@@ -138,12 +138,12 @@ const Projects = (props) => {
                   Intr. Rural School Report
               </Typography>
                 <Typography variant="body2" color="textSecondary" component="p" className={classes.card}>
-                  This app built using React and different light weight libraries at the Front-End and Node.JS and
-                  PostgreSQL database at the Back-End. This app used to help International Rural School administrators
-                  and the board members to communicate and follow up.
-              <a href="https://internationalschoolsocialworks.netlify.com/into" target="iframe_a" className='projectLink'> Click here</a> Or
+                  The landing page developed using HTML, CSS and Javascript. The main app built using React and different light weight libraries at the Front-End 
+                  and Node.JS and PostgreSQL database at the Back-End. This app used to help International Rural School administrators
+                  and the board members to communicate and follow up activities in the School.
+              <a href="https://internationalschoolsocialworks.netlify.com/into" target="iframe_a" className='projectLink'> Click here (Landing page)</a> Or
               <a href="https://internationalruralschoolreport.netlify.com/login" target="iframe_a" className='projectLink'> here to explore the App!</a>
-                  =>https://internationalruralschoolreport.netlify.com/login
+                  =>https://internationalruralschoolreport.netlify.com
               </Typography>
               </CardContent>
               <CardMedia
