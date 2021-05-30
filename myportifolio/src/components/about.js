@@ -44,19 +44,19 @@ function About() {
             <h2>It is my Pleasure to see you here!</h2><br />
             <h2> My Name is Tewodros Zenebe </h2>
             <p>
-                I am a full-stack web application developer living in Charlotte, NC. I have more than 6 years of work expriance in differen tech related work.
-                out of 6 years  3 of them were in building user friendely responsive web application using HTML5, CSS3, Javascript, React, Bootstrap, JQurey and other light weight JavaScript and CSS libraries;
+                I am a full-stack application developer living in Charlotte, NC. I have more than 6 years of work experience in different tech related work.
+                out of 6 years  3 of them were in building user friendly responsive web application using HTML5, CSS3, Javascript, React, Bootstrap, JQurey and other light weight JavaScript and CSS libraries;
             </p>
             <p>
-                I have more than 2 years expriance in creating RESTful API using Node.js (express). I have morthan 3 years expriance developing and manageing 
+                I have more than 2 years experience in creating RESTful API using Node.js (express). I have more than 3 years experience developing and managing 
                 MSSQL Server database. I certified from Microsoft in MSSQL Server database adminstration and
-                developmant.
+                development.
             </p>
             <p>
-                Resently I am participating in the project that built using .Net(core) and React.js. 
-                I also have exposure using Python programing langudge</p>
+                Recently I am participating in the project that built using .Net framework. 
+                I am also developing arctools using Python programing language</p>
             <p>
-                I am driven by my passion for coding, web development, RESTfull API building and Database Adminstration.
+                I am driven by my passion for coding, desktop & web development, RESTfull API building and Database Adminstration.
                 And this never restricts me to a single language or tool. I am always trying out/learning new languages and tools 
                 that facilitate better development. 
             </p>
