@@ -1,5 +1,5 @@
 import React from 'react';
-import CV from '../img/CV.PNG';
+import CV from '../img/CV_TZ.PNG';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
