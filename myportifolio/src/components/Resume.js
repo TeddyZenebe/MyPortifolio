@@ -1,5 +1,5 @@
 import React from 'react';
-import CV from '../img/CV_TZ_geoV.PNG';
+import CV from '../img/mountain.gif';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
